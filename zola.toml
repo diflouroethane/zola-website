@@ -1,0 +1,28 @@
+# The URL the site will be built for
+base_url = "https://imakestuff.fyi"
+theme = "notdose"
+taxonomies = [
+    { name = "tags", feed = true },
+]
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+[markdown]
+
+[markdown.highlighting]
+theme = "catppuccin-mocha"
+
+[extra]
+social_media = [
+    { name = "using a modified dose theme", url = "https://github.com/oltdaniel/dose" },
+    { name = "github", url = "https://github.com/diflouroethane" },
+    { name = "website source", url = "https://github.com/diflouroethane/zola-website"}
+]
+# social_media = [
+    # { name = "GitHub", url = "https://github.com/dilflouroethane" }
+# ]
+default_theme = "dark" # or "light"
+# Put all your custom variables here
