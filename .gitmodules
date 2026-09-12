@@ -1,3 +1,6 @@
 [submodule "themes/dose"]
 	path = themes/dose
 	url = https://github.com/oltdaniel/dose
+[submodule "themes/notdose"]
+	path = themes/notdose
+	url = https://github.com/diflouroethane/dose-as-blog-page
