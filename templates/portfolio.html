@@ -1,0 +1,8 @@
+{%extends "base.html"%}
+
+{%block content%}
+<div style="text-align: left">
+<p style="text-align: left;"><a href="..">..</a>/{{page.slug}}</p>
+{{page.content |safe}}
+</div>
+{%endblock content%}
