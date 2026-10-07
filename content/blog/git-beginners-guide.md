@@ -6,6 +6,9 @@ description = "git user guide for the uninitiated"
 tags = ["linux", "git"]
 +++
 
+> NO AI WAS USED IN ANY PART WRITING, EDITING, OR FINISHING THIS GUIDE.
+> ENJOY!
+
 # How to Use Git (and the CLI)
 *this is especially directed towards hackclubbers. if you don't know what that is and are 18 or under, i'd reccommend checking hackclub.com out :P*
 #### this is oriented towards *complete* beginners, meaning if you already know how to use a command line or know how to use linux, this guide is either not for you, or you can skip pretty far ahead. enjoy!
