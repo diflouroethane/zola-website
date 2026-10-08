@@ -122,4 +122,56 @@ congrats! you just committed your first file!
 
 *if/when you make more changes, you just need to run the `git add [file_name]` and `git commit -m "[message]"`, with [file_name] and [message] replaced with the file name and message respectively.*
 
+Here, let's see an example of that.
+say you added a new file named `foo.html`. 
+you want `foo.html` to be tracked as well, right? well, to add `foo.txt` to the tracking,
+all you need to do is do `git add foo.txt` (along with `git add README.md`
+if you changed it from last time you committed). but, what if you have many many files in subfolders, etc? you could name all files you want in one `git add`, like so: 
+```bash 
+git add README.md foo.txt #etc...
+```
+*OR*
+
+you could do this instead:
+
+```bash
+git add .
+```
+
+this command adds *every* single file in you current directory and all subfolders. (this means you have to be at the top of your project to run this command, not in a folder inside it.
+
+*this is what i will be referring to and using for the remainder of the guide.*
+
+
+### Pushing to GitHub
+
+> note: in this part, i will be referring to new content that might be slightly hard
+to understand. that is okay. just follow what i'm doing and by the end of this, you should be good to go for future projects!
+
+#### Setting up SSH on GitHub
+to get this to work, we first need to set up an 'SSH Key' on GitHub so GitHub knows
+exactly what computer is yours and who is trying to push code onto their website.
+
+to set up SSH keys on github we first need to generate an SSH key.
+
+I like to direct you to [this](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows#generating-a-new-ssh-key)
+url, it's a wayyyy better and more concise guide than i could write lol.
+once you get to the 'adding SSH key to SSH-Agent', come back here because you don't have to do that part.
+
+ok. now you have an SSH key on your system. congrats! you are halfway there. now you just need to add it to github.
+
+so, to do that, you need to first copy the contents of your `id_ed25519.pub` file.
+run this command and copy the output:
+```bash
+$ cat ~/.ssh/id_ed25519.pub
+```
+> just copy that to your clipboard for this next part
+
+then, go to GitHub, and in the upper top right, click on your profile picture and select 'settings'.
+please then select 'SSH and GPG Keys' from the sidebar to the left.
+click 'Add SSH key' or 'New SSH Key'.
+select the type of key, for this one, select 'authentication'.
+in the 'key' field, paste the key you copied earlier.
+click 'add ssh key'.
+you might heve to enter your password too, but once you do, you will be ready for the next step!!
 
