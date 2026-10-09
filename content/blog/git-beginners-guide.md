@@ -100,6 +100,14 @@ now that you have you git tracking turned on or enabled for this folder,
 open the `README.md`file from earlier in a text editor and write something in it.
 (you can use any text editor you want, but i recommend VSCode :P )
 
+### a quick aside
+I *always* forget this part, but be sure to run these commands the very very first time you use git, before you run `git commit` to get everything set up:
+```bash
+$ git config --global user.name "[your name]"
+$ git config --global user.email "[your email]"
+```
+> note: whenever you see brackets like that, just replace those brackets with what they are describing. for instance: `[your name]` would be replaced with 'joe' if your name is joe.
+
 after that, come back here and follow these commands:
 ``` bash
 
@@ -175,3 +183,59 @@ in the 'key' field, paste the key you copied earlier.
 click 'add ssh key'.
 you might heve to enter your password too, but once you do, you will be ready for the next step!!
 
+#### getting our local repository and github connected
+so, up to this point i've been referring to it as uor 'tracking' or our 'folder', but in git, and github,
+it's called a 'repository'. since you have set up a ssh key in github, you can 'push' your code from here to github!
+
+first, however, we need to create a repository on github. so, in the top right corner there should be a 'plus' sign on github, that is a dropdown, and one of the options is
+'create a repository'. click this one. this should bring you to a scree where you can name your repository and add a description. name it whatever you want, and make sure that you **HAVE NOT** toggled on the 'initialize repository with README' or anything similar.
+for the sake of this guide, and for the sake of simplicity, leave those settings alone.
+also, make sure that your repository's visibility is set to 'public'.
+now, you can hit 'create repository'.
+github then moves you to a new page, one that says something along the lines of 'this repository is empty'
+somewhere on that page, there should be a url that you can copy, but make sure that the little slider on the side is highlighting 'ssh' and not 'http'. then, copy that, and head back over to your terminal.
+
+now, you can run the following commands (inside your directory of your project) to connect your local repository to your remote one (the one on github)
+
+```bash
+#the following just renames your branch to 'main' to fit standar conventions...
+$ git branch -m main
+$ git remote add origin [paste git:... url here]
+# it then adds the remote, but it's not quite connected yet.
+# next, run
+$ git push -u origin main
+```
+
+this *should* push it fine.
+
+to check if it worked, you can hop back on over to your web browser
+and reload the tab that has your repository open on github.
+if you pushed correctly, it should show you the same directory structure as on your own computer!
+as a bonus, you should also be able to click on the names of both `foo.txt` or `README.md` and see the contents of them!
+
+Congrats! you just wrote code on your own machine, tracked multiple versions of it, and then put those on github for literally anyone in the world to see!
+
+## Wrapping up
+
+congrats on making it this far!
+
+### A few things to remember
+
+for every commit after those, after all the setup is done, and you are pushing
+to github successfully, the commands follow a general flow:
+```bash
+# you make some changes to your files...
+# you add them to tracking...
+$ git add .
+# then you have to commit those changes to save them...
+$ git commit -m "[whatever message you want]"
+# after that, you can push your changes to GitHub!
+$ git push
+```
+
+## Thanks
+
+Thank you so much for spending your time to read (and maybe learn a bit along the way :P) my git for beginners guide.
+
+### P.S.
+If something was misspelled or something is wrong or could be better, contribute to my [website](https://github.com/diflouroethane/zola-website/blob/main/content/blog/git-beginners-guide.md)'s repo on GitHub (specifically this .md file)!
